@@ -92,6 +92,7 @@ const valueGenerator = (angleValue) => {
         finalValue.innerHTML = `<p>Raccogli bottglie di plastica o lattine +2 punti per ogni bottiglia.</p>`;
       }
       if (i.value == 6) {
+        totalpoints = totalpoints + 5;
         finalValue.innerHTML = `<p>Fare la raccolta differenziata +5 punti.</p>`;
       }
 
