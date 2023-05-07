@@ -73,23 +73,23 @@ const valueGenerator = (angleValue) => {
     if (angleValue >= i.minDegree && angleValue <= i.maxDegree) {
       if (i.value == 1) {
         totalpoints = totalpoints + 1;
-        finalValue.innerHTML = `<p>Raccogli spazzatura per strada +1 per ogni spazzatura.</p>`;
+        finalValue.innerHTML = `<p>Raccogli spazzatura per strada +1 punto.</p>`;
       }
       if (i.value == 2) {
         totalpoints = totalpoints + 1;
-        finalValue.innerHTML = `<p>Consegna spesa ai bisognosi +1 per ogni busta.</p>`;
+        finalValue.innerHTML = `<p>Consegna spesa ai bisognosi +2 punti.</p>`;
       }
       if (i.value == 3) {
-        totalpoints = totalpoints + 1;
-        finalValue.innerHTML = `<p>Pianta alberi +1 per ogni albero.</p>`;
+        totalpoints = totalpoints + 4;
+        finalValue.innerHTML = `<p>Pianta un albero +4 punti.</p>`;
       }
       if (i.value == 4) {
         totalpoints = totalpoints + 3;
-        finalValue.innerHTML = `<p>Usa un mezzo ecologico +3 per ogni Km</p>`;
+        finalValue.innerHTML = `<p>Usa un mezzo ecologico +3 punti</p>`;
       }
       if (i.value == 5) {
         totalpoints = totalpoints + 2;
-        finalValue.innerHTML = `<p>Raccogli bottglie di plastica o lattine +2 punti per ogni bottiglia.</p>`;
+        finalValue.innerHTML = `<p>Raccogli bottglie di plastica o lattine +2 punti.</p>`;
       }
       if (i.value == 6) {
         totalpoints = totalpoints + 5;
