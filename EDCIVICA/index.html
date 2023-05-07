@@ -12,16 +12,24 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="segnapunti punti">
+      <p>Punti: <span id="segnapunti">0</span></p>
+    </div>
     <div class="wrapper">
       <div class="container">
         <canvas id="wheel"></canvas>
         <button id="spin-btn">Spin</button>
-        <img class="rotate_image" src="spinner-arrow-.svg" alt="spinner-arrow" />
+        <img
+          class="rotate_image"
+          src="spinner-arrow-.svg"
+          alt="spinner-arrow"
+        />
       </div>
       <div id="final-value">
         <p>Premi "SPIN" per ricevere la tua missione</p>
       </div>
     </div>
+
     <!-- Chart JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <!-- Chart JS Plugin for displaying text over chart -->

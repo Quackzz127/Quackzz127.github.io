@@ -6,7 +6,7 @@
 }
 body {
   height: 100vh;
-  background:#8f71ff;
+  background: #8f71ff;
 }
 .wrapper {
   width: 100%;
@@ -29,6 +29,7 @@ body {
 .rotate_image {
   transform: rotate(180deg);
 }
+
 #wheel {
   max-height: inherit;
   width: inherit;
@@ -69,6 +70,25 @@ img {
   margin-top: 1.5em;
   color: #fffefe;
   font-weight: 500;
+}
+.segnapunti {
+  width: 50%;
+  max-width: 10em;
+  max-height: 5em;
+  position: absolute;
+  border-radius: 15px;
+  transform: translate(-50%, 35%);
+  left: 50%;
+  right: 50%;
+  padding: 1em;
+  box-sizing: border-box;
+  background-color: #686767;
+  font-size: 150%;
+}
+.punti {
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
 }
 @media screen and (max-width: 768px) {
   .wrapper {

@@ -1,6 +1,7 @@
 const wheel = document.getElementById("wheel");
 const spinBtn = document.getElementById("spin-btn");
 const finalValue = document.getElementById("final-value");
+
 //Object that stores values of minimum and maximum angle for a value
 const rotationValues = [
   { minDegree: 0, maxDegree: 30, value: 2 },
@@ -11,8 +12,10 @@ const rotationValues = [
   { minDegree: 271, maxDegree: 330, value: 3 },
   { minDegree: 331, maxDegree: 360, value: 2 },
 ];
+
 //Size of each piece
 const data = [16, 16, 16, 16, 16, 16];
+
 //background color for each piece
 var pieColors = [
   "#8bffff",
@@ -22,6 +25,7 @@ var pieColors = [
   "#8bffff",
   "#82acff",
 ];
+
 //Create chart
 let myChart = new Chart(wheel, {
   //Plugin for displaying text on pie chart
@@ -58,27 +62,43 @@ let myChart = new Chart(wheel, {
     },
   },
 });
+
 //display value based on the randomAngle
+var totalpoints = 0;
+document.getElementById("segnapunti").innerHTML = totalpoints;
+var points = 0;
 const valueGenerator = (angleValue) => {
   for (let i of rotationValues) {
     //if the angleValue is between min and max then display it
     if (angleValue >= i.minDegree && angleValue <= i.maxDegree) {
-      if(i.value == 1){
+      if (i.value == 1) {
+        totalpoints = totalpoints + 1;
         finalValue.innerHTML = `<p>Raccogli spazzatura per strada +1 per ogni spazzatura.</p>`;
       }
-      if(i.value == 2){
+      if (i.value == 2) {
+        totalpoints = totalpoints + 1;
         finalValue.innerHTML = `<p>Consegna spesa ai bisognosi +1 per ogni busta.</p>`;
       }
-      if(i.value == 3){
+      if (i.value == 3) {
+        totalpoints = totalpoints + 1;
         finalValue.innerHTML = `<p>Pianta alberi +1 per ogni albero.</p>`;
       }
-      if(i.value == 4){
+      if (i.value == 4) {
+        totalpoints = totalpoints + 3;
         finalValue.innerHTML = `<p>Usa un mezzo ecologico +3 per ogni Km</p>`;
       }
+      if (i.value == 5) {
+        finalValue.innerHTML = `<p>...</p>`;
+      }
+      if (i.value == 6) {
+        finalValue.innerHTML = `<p>...</p>`;
+      }
+
       spinBtn.disabled = false;
       break;
     }
   }
+  document.getElementById("segnapunti").innerHTML = totalpoints;
 };
 
 //Spinner count
@@ -89,9 +109,10 @@ let resultValue = 101;
 spinBtn.addEventListener("click", () => {
   spinBtn.disabled = true;
   //Empty final value
-  
+
   //Generate random degrees to stop at
   let randomDegree = Math.floor(Math.random() * (355 - 0 + 1) + 0);
+
   //Interval for rotation animation
   let rotationInterval = window.setInterval(() => {
     //Set rotation for piechart
