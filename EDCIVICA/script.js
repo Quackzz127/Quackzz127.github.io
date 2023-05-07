@@ -88,10 +88,11 @@ const valueGenerator = (angleValue) => {
         finalValue.innerHTML = `<p>Usa un mezzo ecologico +3 per ogni Km</p>`;
       }
       if (i.value == 5) {
-        finalValue.innerHTML = `<p>...</p>`;
+        totalpoints = totalpoints + 2;
+        finalValue.innerHTML = `<p>Raccogli bottglie di plastica o lattine +2 punti per ogni bottiglia.</p>`;
       }
       if (i.value == 6) {
-        finalValue.innerHTML = `<p>...</p>`;
+        finalValue.innerHTML = `<p>Fare la raccolta differenziata +5 punti.</p>`;
       }
 
       spinBtn.disabled = false;
