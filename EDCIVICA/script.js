@@ -18,12 +18,12 @@ const data = [16, 16, 16, 16, 16, 16];
 
 //background color for each piece
 var pieColors = [
-  "#8bffff",
-  "#82acff",
-  "#8bffff",
-  "#82acff",
-  "#8bffff",
-  "#82acff",
+  "#265828",
+  "#4caf50",
+  "#265828",
+  "#4caf50",
+  "#265828",
+  "#4caf50",
 ];
 
 //Create chart
