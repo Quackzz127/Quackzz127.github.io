@@ -1,6 +1,7 @@
 const wheel = document.getElementById("wheel");
 const spinBtn = document.getElementById("spin-btn");
 const finalValue = document.getElementById("final-value");
+const list = document.getElementById("list");
 
 //Object that stores values of minimum and maximum angle for a value
 const rotationValues = [
@@ -72,31 +73,37 @@ const valueGenerator = (angleValue) => {
     //if the angleValue is between min and max then display it
     if (angleValue >= i.minDegree && angleValue <= i.maxDegree) {
       if (i.value == 1) {
-        totalpoints = totalpoints + 1;
         finalValue.innerHTML = `<p>Raccogli spazzatura per strada +1 punto.</p>`;
+        addItemList("Raccogli spazzatura per strada ",1);
       }
       if (i.value == 2) {
-        totalpoints = totalpoints + 1;
+        
         finalValue.innerHTML = `<p>Consegna spesa ai bisognosi +2 punti.</p>`;
+        addItemList("Consegna spesa ai bisognosi. ",2);
       }
       if (i.value == 3) {
-        totalpoints = totalpoints + 4;
+        
         finalValue.innerHTML = `<p>Pianta un albero +4 punti.</p>`;
+        addItemList("Pianta un albero. ",4);
       }
       if (i.value == 4) {
-        totalpoints = totalpoints + 3;
-        finalValue.innerHTML = `<p>Usa un mezzo ecologico +3 punti</p>`;
+        
+        finalValue.innerHTML = `<p>Usa un mezzo ecologico +3 punti.</p>`;
+        addItemList("Usa un mezzo ecologico. ",3);
       }
       if (i.value == 5) {
-        totalpoints = totalpoints + 2;
+        
         finalValue.innerHTML = `<p>Raccogli bottglie di plastica o lattine +2 punti.</p>`;
+        addItemList("Raccogli bottglie di plastica o lattine. ",2);
       }
       if (i.value == 6) {
-        totalpoints = totalpoints + 5;
+        
         finalValue.innerHTML = `<p>Fare la raccolta differenziata +5 punti.</p>`;
+        addItemList("Fare la raccolta differenziata. ",5);
+        
       }
 
-      spinBtn.disabled = false;
+      spinBtn.disabled = true;
       break;
     }
   }
@@ -137,3 +144,26 @@ spinBtn.addEventListener("click", () => {
     }
   }, 10);
 });
+
+function addItemList(item, value){
+  const li = document.createElement("li");
+
+  const checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+
+  li.appendChild(document.createTextNode(`${item} - ${value} punto/i`));
+  li.appendChild(checkbox);
+
+  list.appendChild(li);
+
+  checkbox.addEventListener("change", function(){
+    if(this.checked){
+      li.style.display = "none";
+      totalpoints += value;
+      document.getElementById("segnapunti").innerHTML = totalpoints;
+      spinBtn.disabled = false;
+    }else{
+      li.style.display = "block";
+    }
+  })
+}

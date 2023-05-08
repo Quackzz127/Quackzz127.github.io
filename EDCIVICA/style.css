@@ -75,7 +75,7 @@ img {
   width: 50%;
   max-width: 10em;
   max-height: 5em;
-  position: absolute;
+  position: fixed;
   border-radius: 15px;
   transform: translate(-50%, 35%);
   left: 50%;
@@ -97,4 +97,21 @@ img {
   img {
     right: -5%;
   }
+}
+
+input[type = checkbox]{
+  margin-left: 4%;
+  transform: scale(2);
+}
+
+.missioni{
+  border: solid gray;
+  width: 25%;
+  position: fixed;
+  border-radius: 10px;
+  padding: 2em;
+  color: white;
+  background-color: #e1ad01;
+  font-size: 20px;
+  font-weight: bold;
 }
