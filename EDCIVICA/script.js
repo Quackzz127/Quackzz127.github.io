@@ -167,3 +167,10 @@ function addItemList(item, value){
     }
   })
 }
+
+const missioniTab = document.querySelector('.missioni-tab');
+const missioniTabToggle = document.querySelector('.missioni-tab-toggle');
+
+missioniTabToggle.addEventListener('click', () => {
+  missioniTab.classList.toggle('missioni-tab-open');
+});

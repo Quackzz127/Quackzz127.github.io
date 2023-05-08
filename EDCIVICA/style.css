@@ -13,7 +13,7 @@ body {
   max-width: 34.37em;
   max-height: 90vh;
   background-color: #686767;
-  position: absolute;
+  position: fixed;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
@@ -104,14 +104,56 @@ input[type = checkbox]{
   transform: scale(2);
 }
 
-.missioni{
-  border: solid gray;
-  width: 25%;
+
+.missioni-tab {
   position: fixed;
-  border-radius: 10px;
-  padding: 2em;
-  color: white;
+  top: 0%;
+  left: -27%;
+  width: 30%;
+  height: 100%;
   background-color: #e1ad01;
-  font-size: 20px;
+  border-radius: 10px;
+  transition: left 0.5s ease-in-out;
+}
+
+.missioni-tab-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  background-color: #686767;
+  border-top-right-radius: 10px;
+}
+
+.missioni-tab-header h2 {
+  color: #fff;
+  font-size: 1.5em;
   font-weight: bold;
+}
+
+.missioni-tab-toggle {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.missioni-tab-content {
+  font-size: 25px;
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 2em;
+  height: 100%;
+}
+
+.missioni-tab-open {
+  left: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .missioni-tab {
+    width: 50%;
+    left: -50%;
+  }
 }
