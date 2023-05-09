@@ -106,12 +106,13 @@ input[type = checkbox]{
 
 .missioni-tab {
   position: fixed;
-  top: 0%;
+  top: 25%;
   left: -27%;
   width: 30%;
-  height: 100%;
+  height: 25%;
   background-color: #e1ad01;
-  border-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
   transition: left 0.5s ease-in-out;
 }
 
@@ -140,11 +141,12 @@ input[type = checkbox]{
 
 .missioni-tab-content {
   color: white;
-  font-size: 25px;
+  font-size: 20px;
   padding-top: 50px;
   padding-left: 50px;
   padding-right: 2em;
   height: 100%;
+  font-weight: bold;
 }
 
 .missioni-tab-open {
@@ -156,4 +158,22 @@ input[type = checkbox]{
     width: 50%;
     left: -50%;
   }
+}
+
+.home{
+  border:#686767;
+  background-color: #686767;
+  position: absolute;
+  width: 15%;
+  height: 60px;
+  padding-top: 10px;
+  padding-left: 20px;
+  border-bottom-right-radius: 1000px;
+}
+
+#home{
+  color: white;
+  text-decoration: none;
+  font: bold;
+  font-size: 25px;
 }
