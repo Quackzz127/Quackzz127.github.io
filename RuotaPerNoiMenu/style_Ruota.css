@@ -6,7 +6,7 @@
 }
 body {
   height: 100vh;
-  background: #ffffff;
+  background:whitesmoke;
 }
 .wrapper {
   width: 100%;
@@ -83,6 +83,7 @@ img {
   box-sizing: border-box;
   background-color: #686767;
   font-size: 150%;
+  box-shadow: 0 4em 5em rgba(27, 8, 53, 0.2);
 }
 .punti {
   text-align: center;
