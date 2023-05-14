@@ -29,8 +29,7 @@
 }
 
 #navbar__logo{
-  background-color: #0ad303;
-  
+  background-color: #53e058;
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -40,7 +39,7 @@
   align-items: center;
   cursor: pointer;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
 }
 
@@ -84,7 +83,7 @@
 
 .button {
   display: flex;
-  justify-content: cente;
+  justify-content: center;
   align-items: center;
   text-decoration: none;
   padding: 10px 20px;
