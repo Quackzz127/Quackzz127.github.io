@@ -12,39 +12,41 @@
     <link rel="stylesheet" href="style_Ruota.css" />
   </head>
   <body>
-
-    <div class = "home">
-      <a href="index.html" id="home">HOME</a>
-    </div>
-
-    <div class="missioni-tab">
-      <div class="missioni-tab-header">
-        <h2>Missione:</h2>
-        <button class="missioni-tab-toggle">+</button>
+    <div class="background">
+      <div class = "home">
+        <a href="index.html" id="home">HOME</a>
       </div>
-      <div class="missioni-tab-content">
-        <ul id="list"></ul>
+  
+      <div class="missioni-tab">
+        <div class="missioni-tab-header">
+          <h2>Missione:</h2>
+          <button class="missioni-tab-toggle">+</button>
+        </div>
+        <div class="missioni-tab-content">
+          <ul id="list"></ul>
+        </div>
+      </div>
+  
+      <div class="segnapunti punti">
+        <p>Punti: <span id="segnapunti">0</span></p>
+      </div>
+  
+      <div class="wrapper">
+        <div class="container">
+          <canvas id="wheel"></canvas>
+          <button id="spin-btn">Spin</button>
+          <img
+            class="rotate_image"
+            src="spinner-arrow-.svg"
+            alt="spinner-arrow"
+          />
+        </div>
+        <div id="final-value">
+          <p>Premi "SPIN" per ricevere la tua missione</p>
+        </div>
       </div>
     </div>
-
-    <div class="segnapunti punti">
-      <p>Punti: <span id="segnapunti">0</span></p>
-    </div>
-
-    <div class="wrapper">
-      <div class="container">
-        <canvas id="wheel"></canvas>
-        <button id="spin-btn">Spin</button>
-        <img
-          class="rotate_image"
-          src="spinner-arrow-.svg"
-          alt="spinner-arrow"
-        />
-      </div>
-      <div id="final-value">
-        <p>Premi "SPIN" per ricevere la tua missione</p>
-      </div>
-    </div>
+    
 
 
     <!-- Chart JS -->
